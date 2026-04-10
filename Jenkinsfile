@@ -26,8 +26,9 @@ pipeline {
                 script 
                 {
                     sh '''
-                    echo Workspace: %WORKSPACE%
+                    echo Workspace: $WORKSPACE
                     git --version
+                    which cmake || true
                     cmake --version
                     '''
                 }
