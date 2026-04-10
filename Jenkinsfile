@@ -11,13 +11,13 @@ pipeline {
             }
         }
 
-        stage('Test from GitHub') 
-        {
-            steps 
-            {
-                echo 'Hello, Jenkins! This is a test pipeline to build and test a C++ project using CMake.'
-            }
-        }
+        // stage('Test from GitHub') 
+        // {
+        //     steps 
+        //     {
+        //         echo 'Hello, Jenkins! This is a test pipeline to build and test a C++ project using CMake.'
+        //     }
+        // }
 
         stage('Show Environment Variables') 
         {
@@ -43,6 +43,28 @@ pipeline {
                 whoami
                 hostname
                 which cmake || echo "cmake NOT found"
+                '''
+            }
+        }
+
+        stage('Build') 
+        {
+            steps 
+            {
+                sh '''
+                echo "Building the project..."
+
+                # Create a build directory
+                mkdir -p build
+                cd build
+
+                # Run CMake
+                cmake ..
+
+                # Build project
+                cmake --build . -- -j$(nproc)
+
+                echo "Build completed successfully!"
                 '''
             }
         }
