@@ -19,21 +19,21 @@ pipeline {
             }
         }
 
-        // stage('Show Environment Variables') 
-        // {
-        //     steps 
-        //     {
-        //         script 
-        //         {
-        //             sh '''
-        //             echo Workspace: $WORKSPACE
-        //             git --version
-        //             which cmake || true
-        //             cmake --version
-        //             '''
-        //         }
-        //     }
-        // }
+        stage('Show Environment Variables') 
+        {
+            steps 
+            {
+                script 
+                {
+                    sh '''
+                    echo Workspace: $WORKSPACE
+                    git --version
+                    which cmake || true
+                    cmake --version
+                    '''
+                }
+            }
+        }
 
         stage('Debug') 
         {
