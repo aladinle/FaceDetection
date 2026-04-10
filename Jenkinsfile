@@ -31,14 +31,6 @@ pipeline {
                     cmake --version
                     '''
                 }
-                else
-                {
-                    bat '''
-                    echo Workspace: %WORKSPACE%
-                    git --version
-                    cmake --version
-                    '''
-                }
             }
         }
     }
