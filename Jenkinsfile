@@ -19,19 +19,31 @@ pipeline {
             }
         }
 
-        stage('Show Environment Variables') 
+        // stage('Show Environment Variables') 
+        // {
+        //     steps 
+        //     {
+        //         script 
+        //         {
+        //             sh '''
+        //             echo Workspace: $WORKSPACE
+        //             git --version
+        //             which cmake || true
+        //             cmake --version
+        //             '''
+        //         }
+        //     }
+        // }
+
+        stage('Debug') 
         {
             steps 
             {
-                script 
-                {
-                    sh '''
-                    echo Workspace: $WORKSPACE
-                    git --version
-                    which cmake || true
-                    cmake --version
-                    '''
-                }
+                sh '''
+                whoami
+                hostname
+                which cmake || echo "cmake NOT found"
+                '''
             }
         }
     }
