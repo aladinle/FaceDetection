@@ -23,11 +23,22 @@ pipeline {
         {
             steps 
             {
-                bat '''
-                echo Workspace: %WORKSPACE%
-                git --version
-                cmake --version
-                '''
+                script 
+                {
+                    sh '''
+                    echo Workspace: %WORKSPACE%
+                    git --version
+                    cmake --version
+                    '''
+                }
+                else
+                {
+                    bat '''
+                    echo Workspace: %WORKSPACE%
+                    git --version
+                    cmake --version
+                    '''
+                }
             }
         }
     }
