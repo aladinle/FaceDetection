@@ -7,5 +7,5 @@ pipeline {
                 echo 'Hello, Jenkins! This is a test pipeline to build and test a C++ project using CMake.'
             }
         }
-
+    }
 }
