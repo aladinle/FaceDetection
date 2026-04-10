@@ -1,0 +1,10 @@
+^D:\SELF PROJECTS\C++ APPS\FACEDETECTION\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" "-SD:/Self Projects/C++ Apps/FaceDetection" "-BD:/Self Projects/C++ Apps/FaceDetection/build" --check-stamp-file "D:/Self Projects/C++ Apps/FaceDetection/build/CMakeFiles/generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

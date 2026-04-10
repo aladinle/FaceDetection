@@ -1,0 +1,37 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Run face_detection (MSVC Debug)",
+      "type": "cppvsdbg",
+      "request": "launch",
+      "program": "${workspaceFolder}/build/Debug/face_detection.exe",
+      "args": [],
+      "stopAtEntry": false,
+      "cwd": "${workspaceFolder}/build/Debug",
+      "environment": [
+        {
+          "name": "PATH",
+          "value": "C:/opencv/build/x64/vc16/bin;${env:PATH}"
+        }
+      ],
+      "console": "externalTerminal"
+    },
+    {
+      "name": "Run face_detection (MSVC Release)",
+      "type": "cppvsdbg",
+      "request": "launch",
+      "program": "${workspaceFolder}/build/Release/face_detection.exe",
+      "args": [],
+      "stopAtEntry": false,
+      "cwd": "${workspaceFolder}/build/Release",
+      "environment": [
+        {
+          "name": "PATH",
+          "value": "C:/opencv/build/x64/vc16/bin;${env:PATH}"
+        }
+      ],
+      "console": "externalTerminal"
+    }
+  ]
+}
