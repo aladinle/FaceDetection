@@ -7,8 +7,8 @@
 namespace fs = std::filesystem;
 
 static const std::string CASCADE_PATH = "data/haarcascade_frontalface_default.xml";
-//static const std::string IMAGE_PATH = "images/profile pic.jpg";
-static const std::string IMAGE_PATH = "images/test.jpg";
+static const std::string IMAGE_PATH = "images/profile pic.jpg";
+//static const std::string IMAGE_PATH = "images/test.jpg";
 
 bool loadFaceCascade(cv::CascadeClassifier& faceCascade) {
     if (!faceCascade.load(CASCADE_PATH)) {
