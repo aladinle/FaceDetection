@@ -20,4 +20,3 @@ D:\Self Projects\C++ Apps\FaceDetection\build\Release\abseil_dll.dll
 D:\Self Projects\C++ Apps\FaceDetection\build\Release\opencv_calib3d4.dll
 D:\Self Projects\C++ Apps\FaceDetection\build\Release\opencv_features2d4.dll
 D:\Self Projects\C++ Apps\FaceDetection\build\Release\opencv_flann4.dll
-D:\Self Projects\C++ Apps\FaceDetection\build\face_detection.dir\Release\face_det.636CC779.Up2Date
