@@ -47,24 +47,19 @@ pipeline {
             }
         }
 
-        stage('Build') 
-        {
-            steps 
-            {
+        stage('Build') {
+            steps {
                 sh '''
-                echo "Building the project..."
+                echo "Starting build..."
 
-                # Create a build directory
+                rm -rf build
                 mkdir -p build
                 cd build
 
-                # Run CMake
                 cmake ..
-
-                # Build project
                 cmake --build . -- -j$(nproc)
 
-                echo "Build completed successfully!"
+                echo "Build completed!"
                 '''
             }
         }
